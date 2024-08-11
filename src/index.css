@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --loginBtnColor: rgba(169, 31, 47, 10%);
+  --pryBtnColor: #a91f2f;
+  --redText: #bd0b20;
+  --text: #444444;
+  --purple: #353550;
+}
+
+img {
+  display: block;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+button,
+input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+.hero {
+  background: linear-gradient(
+      to right,
+      rgba(29, 29, 29, 0.603),
+      rgba(0, 0, 0, 0.33)
+    ),
+    url(./assets/images/heroBg.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding-block: 3rem;
+  padding-inline: 1rem;
+
+  p {
+    line-height: 1.5;
+    width: 20rem;
+    margin-block: 16px 30px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.corporateHero {
+  background: url(./assets/images/cooperatehero.png);
+}
+
+.pryBtn {
+  background-color: var(--pryBtnColor);
+  color: white;
+  width: 150px;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.howItWorks {
+  background-image: url("./assets/images/howitworkbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-inline: 1rem;
+  padding-block-start: 4rem;
+  text-align: center;
+
+  .redText {
+    letter-spacing: 3px;
+    font-size: 14px;
+  }
+  h2 {
+    color: var(--text);
+    padding-block: 24px 56px;
+  }
+
+  h3 {
+    color: var(--text);
+  }
+  .recruitment {
+    display: grid;
+    place-items: center;
+    gap: 3rem;
+
+    .box {
+      display: grid;
+      place-items: center;
+      gap: 1.125rem;
+    }
+  }
+
+  .arrowright {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-block-start: 3rem;
+  }
+}
+
+.redText {
+  color: var(--redText);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.exploreboard {
+  text-align: center;
+  padding-inline: 1rem;
+  padding-block: 4rem;
+
+  h2 {
+    color: var(--text);
+    padding-block-end: 24px;
+  }
+
+  p:has(a) a {
+    color: var(--redText);
+    text-decoration: underline;
+  }
+
+  .exploreBox {
+    display: grid;
+    gap: 1.5rem;
+    margin-block: 3rem;
+    position: relative;
+  }
+
+  .yellowred {
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: -50% -50%;
+  }
+  .box {
+    background: url("./assets/images/mask.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-inline: 36px;
+    padding-block: 36px 24px;
+    height: 165px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    display: grid;
+    gap: 16px;
+  }
+
+  .signup {
+    margin-block: 1.5rem;
+    display: grid;
+    gap: 10px;
+    place-items: center;
+  }
+}
+
+.profilewriting {
+  display: grid;
+  margin-bottom: 3rem;
+
+  h3 {
+    margin-block-end: 1rem;
+  }
+
+  p {
+    line-height: 2;
+  }
+
+  & > * {
+    padding: 1rem;
+    padding-block: 3rem 2rem;
+    line-height: 1.5rem;
+  }
+
+  > :nth-child(1) {
+    background-color: var(--purple);
+    color: white;
+  }
+  > :nth-child(2) {
+    color: var(--purple);
+  }
+  button {
+    margin-block-start: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 225px;
+  }
+}
+
+.training {
+  margin-block-start: 4rem;
+}
+
+.boardRecruitment {
+  margin-block-start: 3rem;
+  padding-inline: 1rem;
+
+  .red {
+    color: var(--redText);
+  }
+  h2 {
+    text-align: center;
+  }
+
+  br {
+    display: none;
+  }
+
+  & > p {
+    text-align: center;
+    margin-block-start: 1rem;
+  }
+
+  .columnsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2rem;
+    padding-block: 1rem;
+
+    .column {
+      h3 {
+        font-size: 1rem;
+      }
+      font-size: 13px;
+      width: 1fr;
+
+      display: grid;
+      grid-template-rows: 8rem 1fr 1fr 1fr 10rem;
+
+      & > * {
+        padding: 12px 8px;
+        display: grid;
+        align-items: center;
+        width: 100%;
+      }
+      & > :nth-child(even) {
+        background-color: rgba(66, 66, 67, 0.1);
+      }
+      & > :nth-child(1) {
+        display: grid;
+        align-content: center;
+        gap: 10px;
+      }
+
+      & > :last-child {
+        align-items: start;
+      }
+
+      &:nth-of-type(2) {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        & > :nth-child(even) {
+          background-color: rgba(169, 31, 47, 0.1);
+        }
+      }
+      &:nth-of-type(3) {
+        text-align: center;
+      }
+    }
+  }
+  button {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 12px;
+    padding: 14px;
+  }
+}
+
+@media (min-width: 580px) {
+  :root {
+    --paddingInline: 2rem;
+  }
+
+  .hero {
+    padding-inline: var(--paddingInline);
+    p {
+      width: auto;
+      margin-block: 16px 50px;
+      br {
+        display: initial;
+      }
+    }
+  }
+  .howItWorks {
+    padding-inline: var(--paddingInline);
+    .recruitment {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .redText {
+      font-size: 1rem;
+      letter-spacing: 4px;
+    }
+  }
+
+  .exploreboard {
+    padding-inline: var(--paddingInline);
+    padding-block: 100px;
+
+    .exploreBox {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box {
+      height: auto;
+    }
+  }
+  .profilewriting > * {
+    padding-inline: var(--paddingInline);
+  }
+  .boardRecruitment {
+    padding-inline: var(--paddingInline);
+    br {
+      display: initial;
+    }
+
+    p {
+      max-width: 600px;
+      margin-inline: auto;
+      br {
+        display: none;
+      }
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    .columnsContainer .column {
+      font-size: 14px;
+
+      & > * {
+        padding-inline: 1rem;
+        padding-block: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 980px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    height: 453px;
+    padding-block: 108px 33px;
+    padding-inline: 2rem;
+  }
+  .howItWorks {
+    padding-block-start: 5rem;
+
+    .arrowright {
+      margin-block-start: 4rem;
+    }
+  }
+  .profilewriting {
+    grid-template-columns: repeat(2, 1fr);
+
+    & > * {
+      padding-block: 93px 74px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .boardRecruitment {
+    .column {
+      font-size: 1rem !important;
+      h3 {
+        font-size: 1.5rem !important;
+      }
+      grid-template-rows: 7rem 1fr 1fr 1fr 10rem !important;
+
+      & > * {
+        padding: 1.5rem !important;
+        display: grid;
+        align-items: center;
+      }
+    }
+    button {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --paddingInline: 53px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.8125rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+  header {
+    padding-inline: var(--paddingInline);
+
+    padding-block: 1.5rem;
+    .logo img {
+      width: 250px;
+    }
+
+    .beta {
+      padding: 4px 7px;
+      background-color: #08a534;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50px;
+      color: white;
+      translate: 80% -50%;
+      font-size: 11px;
+      font-weight: 600;
+    }
+  }
+  .hero {
+    height: 553px;
+    padding-block: 108px 33px;
+    padding-inline: var(--paddingInline);
+
+    p {
+      line-height: 2;
+      margin-block: 16px 60px;
+    }
+  }
+  .pryBtn {
+    width: 250px;
+    padding: 1.5rem;
+  }
+
+  .howItWorks {
+    padding-inline: var(--paddingInline);
+    padding-block-start: 125px;
+
+    .arrowright {
+      margin-block-start: 97px;
+    }
+  }
+
+  .exploreboard {
+    padding-block: 125px;
+
+    padding-inline: var(--paddingInline);
+
+    .exploreBox {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .profilewriting {
+    & > * {
+      padding-inline: 90px;
+    }
+  }
+}
